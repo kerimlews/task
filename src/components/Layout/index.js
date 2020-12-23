@@ -8,7 +8,7 @@ const Layout = ({ children, title }) => (
       {
         title && (
           <div className="row">
-            <h3 className="col-12">{title}</h3>
+            <h3 className="col-12 border-bottom">{title}</h3>
           </div>
         )
       }
