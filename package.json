@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "start": "webpack-cli serve --mode development"
+    "dev": "webpack-cli serve --mode development",
+    "start": "concurrently --kill-others \"npm run server\" \"npm run dev\"",
+    "server": "nodemon --exec babel-node --presets @babel/env server.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +20,9 @@
   },
   "homepage": "https://github.com/kerimlews/task#readme",
   "devDependencies": {
+    "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@babel/plugin-transform-react-constant-elements": "^7.12.1",
@@ -30,8 +34,11 @@
     "babel-loader": "^8.2.2",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "classnames": "^2.2.6",
+    "concurrently": "^5.3.0",
+    "cors": "^2.8.5",
     "css-loader": "^5.0.1",
     "directory-named-webpack-plugin": "^4.0.1",
+    "express": "^4.17.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.0",
     "loadsh": "0.0.4",
@@ -52,7 +59,10 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
+    "express.js": "^1.0.0",
+    "nodemon": "^2.0.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0"

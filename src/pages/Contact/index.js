@@ -9,7 +9,7 @@ import { useTextInput } from 'utils/hooks';
 import { isInstanceValid } from 'validation/validator';
 
 const Contact = () => {
-  const [alert, setAlert] = useState({ type: 'danger', message: null });
+  const [alert, setAlert] = useState({ type: 'danger', message: [] });
   const [isLoading, setLoading] = useState(false);
   const [isSubmitAttempted, setSubmitAttempted] = useState(false);
   const email = useTextInput('', 'E-mail', isSubmitAttempted, ruleSet.email);

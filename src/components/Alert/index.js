@@ -11,7 +11,7 @@ const Alert = ({ message, type }) => {
 
   return (
     <div className={className} role="alert">
-      { message}
+      { message.map(msg => <div>{msg}</div>)}
     </div>
   )
 }

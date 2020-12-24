@@ -1,6 +1,6 @@
 
-import { must } from 'validation/rule-builder';
-import { beValidEmail, beLongerThan, beNotEmpty } from 'validation/predicates';
+import { must } from '../../../validation/rule-builder';
+import { beValidEmail, beLongerThan, beNotEmpty } from '../../../validation/predicates';
 
 export const ruleSet = {
   email: must(beNotEmpty)
