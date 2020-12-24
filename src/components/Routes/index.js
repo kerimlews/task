@@ -4,7 +4,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import Contact from 'pages/Contact';
 import Home from 'pages/Home';
 
-const Router = () => (
+const Routes = () => (
   <Switch>
     <Route path="/contact" component={Contact} />
     <Route exact path="/home" component={Home} />
@@ -12,4 +12,4 @@ const Router = () => (
   </Switch>
 );
 
-export default Router;
+export default Routes;

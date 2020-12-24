@@ -1,13 +1,13 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Router from 'components/Router';
+import Routes from 'components/Routes';
 import { BrowserRouter } from 'react-router-dom';
 
 import 'scss/app.scss';
 
 const App = () => (
   <BrowserRouter>
-    <Router />
+    <Routes />
   </BrowserRouter>
 );
 

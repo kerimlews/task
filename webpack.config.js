@@ -86,7 +86,9 @@ module.exports = function (_env, argv) {
       alias: {
         components: path.resolve(__dirname, 'src/components'),
         pages: path.resolve(__dirname, 'src/pages'),
-        scss: path.resolve(__dirname, 'src/scss')
+        scss: path.resolve(__dirname, 'src/scss'),
+        validation: path.resolve(__dirname, 'src/validation'),
+        utils: path.resolve(__dirname, 'src/utils')
       },
       plugins: [
         new DirectoryNamedWebpackPlugin(true)
